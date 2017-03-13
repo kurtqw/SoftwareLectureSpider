@@ -1,0 +1,34 @@
+create database test
+
+create table cs(title nvarchar(200), 
+ 
+speaker nvarchar(200), 
+ 
+stime nvarchar(100), 
+ 
+ptime nvarchar(100),  
+
+address nvarchar(100), 
+ 
+uni nvarchar(100), 
+ 
+url nvarchar(100) not null,  
+
+sdate int, 
+pdate int, 
+primary key (url))
+
+筛选安全
+SELECT * FROM test.cs where title like '%Security%' or '%Cryptology%' or '%密码%' or '%安全%' order by sdate desc 
+
+
+发布时间排序
+SELECT * FROM test.cs order by pdate desc
+
+
+一年之内
+SELECT * FROM test.cs where sdate > 20160000 order by sdate desc  
+
+
+讲座时间排序
+SELECT * FROM test.cs order by sdate desc
